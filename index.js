@@ -3,11 +3,11 @@
 function getDogImage(){
     fetch('https://dog.ceo/api/breeds/image/random')
     .then(response => response.json())
-    .then(responseJson => consolelog(responseJson))
+    .then(responseJson => console.log(responseJson))
 }
 
 function watchForm(){
-    $('form').sumbit(event => {
+    $('form').submit(event => {
         event.preventDefault()
         getDogImage()
     })
@@ -17,3 +17,5 @@ $(function(){
     console.log('App loaded! Waiting for sumbit!')
     watchForm()
 })
+
+
